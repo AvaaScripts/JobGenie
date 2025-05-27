@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -7,6 +7,13 @@ app = Flask(__name__)
 def home():
     return jsonify({"message": "JobGenie API is running!"})
 
+@app.route('/add-job',methods=['POST'])
+def add_job():
+    data=request.get_json()
+    return jsonify({
+        "message": "Job received successfully!",
+        "job_data": data
+    })
 if __name__ == '__main__':
     app.run(debug=True)
 
