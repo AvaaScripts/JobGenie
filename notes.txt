@@ -4,4 +4,5 @@ git add .
 git commit -m "msg"
 git push origin main
 
-python app/app.py
+to run:
+cd  C:\Users\300372967\Desktop\jobgenie\JobGenie    python app/app.py
